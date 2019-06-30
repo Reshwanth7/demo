@@ -1,0 +1,15 @@
+node {
+   
+   stage('SCM Checkout'){
+     Clone repo
+	git branch: 'master', 
+	
+	url: 'https://github.com/Reshwanth7/demo/new/master/shoppingcart'
+   
+   }
+   
+    stage('Mvn Package'){
+	   // Build using maven
+	   
+	   sh "${mvn} clean package deploy"
+   }
