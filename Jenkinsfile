@@ -1,15 +1,14 @@
 node {
    
    stage('SCM Checkout'){
-	git branch: 'master', 
-	
-	url: 'https://github.com/Reshwanth7/demo'
+	   
+	git 'https://github.com/Reshwanth7/demo'
    
    }
    
-    stage('Mvn Package'){
-	   // Build using maven
+    stage('Compile-Package'){
+	   def mvnHome = tool name: 'Maven', type: 'maven'
 	   
-	   sh "${mvn} clean package deploy"
+	   sh "${mvnHome}/bin/mvn package"
    }
 }
