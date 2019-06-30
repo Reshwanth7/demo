@@ -31,7 +31,7 @@ public class AdminController {
    * @param myemployees
    * @return
    */
-  @PostMapping(value= "/saveemployees")
+  @PostMapping(value= "/saveemployee")
   public String saveEmployee(@RequestBody List<Employee> myemployees) {
       eserv.saveEmployee(myemployees);
       return "Records saved in the db.";
