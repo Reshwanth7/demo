@@ -12,3 +12,4 @@ node {
 	   
 	   sh "${mvn} clean package deploy"
    }
+}
