@@ -3,7 +3,7 @@ node {
    stage('SCM Checkout'){
 	git branch: 'master', 
 	
-	url: 'https://github.com/Reshwanth7/demo/new/master/shoppingcart'
+	url: 'https://github.com/Reshwanth7/demo'
    
    }
    
